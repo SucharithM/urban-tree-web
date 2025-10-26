@@ -1,0 +1,144 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmos Jones Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
+  
+</head>
+
+
+<body>
+  <header>
+    <h1>Atmos Jones Lab</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href=" https://bsky.app/profile/treesrawesome.bsky.social" target="_blank" class="bsky-link">
+        <img src="bluesky-circle-logo-icon-bluesky-app-editable-transparent-background-premium-social-media-design-for-digital-download-free-png.png" width="50" alt="Bluesky Logo" class="bsky-logo">
+      </a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Urban Tree Ecophysiology Network</h2>
+    <p>
+     We are collecting data from a sugar maple (Acer saccharum) located on Georgetown's campus in Washington, D.C. 
+     This tree is part of the Urban Trees Ecophysiology Network (UTEN), a network of researchers aiming to understand the 
+     urban trees response to climate change.
+     The data is collected using a variety of sensors.
+    </p>
+
+  </section>
+    <h2 class="section-title">Map of Data Locations</h2>
+  
+    <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-406px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://b.tile.openstreetmap.org/16/18736/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(669px, 231px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18737/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(925px, 231px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18736/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(669px, -25px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18737/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(925px, -25px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18736/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(669px, 487px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18737/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(925px, 487px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18735/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(413px, 231px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18738/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1181px, 231px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18735/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(413px, -25px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18738/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1181px, -25px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18735/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(413px, 487px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18738/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1181px, 487px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18734/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(157px, 231px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18739/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1437px, 231px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18734/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(157px, -25px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18739/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1437px, -25px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18734/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(157px, 487px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18739/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1437px, 487px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18733/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-99px, 231px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18740/25068.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1693px, 231px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18733/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-99px, -25px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.org/16/18740/25067.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1693px, -25px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.org/16/18733/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-99px, 487px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.org/16/18740/25069.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1693px, 487px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(945px, 250px, 0px);"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(910px, 155px, 0px);"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(945px, 250px, 0px); z-index: 250;"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(910px, 155px, 0px); z-index: 155;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"><div class="leaflet-popup  leaflet-zoom-animated" style="opacity: 1; transform: translate3d(911px, 121px, 0px); bottom: -7px; left: -135px;"><div class="leaflet-popup-content-wrapper"><div class="leaflet-popup-content" style="width: 223px;">Hoya Harvest Garden Weather Station</div></div><div class="leaflet-popup-tip-container"><div class="leaflet-popup-tip"></div></div><a class="leaflet-popup-close-button" role="button" aria-label="Close popup" href="#close"><span aria-hidden="true">×</span></a></div></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(4.79669e+06px, 6.41743e+06px, 0px) scale(32768);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script>
+      // Initialize the map
+      var map = L.map('map').setView([38.90781, -77.07416], 16); 
+    
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    
+      // Add markers
+      var locations = [
+        { name: "Harbin Sugar Maple", coords: [38.90781, -77.07416] },
+        { name: "Hoya Harvest Garden Weather Station", coords: [38.90940, -77.07490] },
+       
+      ];
+    
+      locations.forEach(function(loc) {
+        L.marker(loc.coords).addTo(map)
+          .bindPopup(loc.name)
+          .openPopup();
+      });
+    </script>
+
+<section class="carousel-section"> 
+  <div class="carousel">
+    <button class="carousel-btn prev">‹</button>
+
+    <div class="carousel-track-container">
+      <ul class="carousel-track" >
+        
+      </ul>
+    </div>
+
+    <button class="carousel-btn next"></button>
+  </div>
+</section>
+
+<section id="harbin-section">
+  <h2 class="section-title">Data from Harbin Sugar Maple</h2>
+
+  <!-- Temperature + Humidity -->
+  <div class="graph-grid">
+    <div class="chart-wrapper" >
+      
+    </div>
+
+    <div class="chart-wrapper" >
+      
+      
+    </div>
+  </div>
+
+  <!-- Dendrometer + LD -->
+  <div class="graph-grid">
+    <div class="chart-wrapper" >
+      
+      
+    </div>
+
+    <div class="chart-wrapper" >
+      
+      
+    </div>
+  </div>
+
+  <!-- Battery charts -->
+  <div class="graph-grid battery-charts-row">
+    <div class="chart-wrapper" >
+      
+      
+    </div>
+
+    <div class="battery-percent-wrapper">
+      
+    </div>
+  </div>
+</section>
+
+<!-- Weather Station Section -->
+<section id="hhg-section">
+  <h2 class="section-title">Hoya Harvest Weather Station</h2>
+
+  <div class="graph-grid">
+    <div class="chart-wrapper" >
+      
+    </div>
+
+    <div class="chart-wrapper" >
+      
+      
+    </div>
+  </div>
+
+  <p class="footer" id="weatherFooter"></p>
+</section>
+
+<!-- Data Table Section -->
+<h2 class="section-title">Raw Sensor Readings</h2>
+
+
+</script><div class="lightbox"><img></div>
+
+
+</body>
