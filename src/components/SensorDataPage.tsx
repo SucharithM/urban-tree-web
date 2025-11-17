@@ -362,7 +362,9 @@ export function SensorDataPage() {
 
   const currentNode = nodes.find((n) => n.id === selectedNode)!;
   const currentData = nodeData[selectedNode];
-
+  if (!currentData) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}

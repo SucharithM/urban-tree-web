@@ -1,7 +1,7 @@
 "use client";
 
-import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react@8.6.0";
-import { ArrowLeft, ArrowRight } from "lucide-react@0.487.0";
+import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "./button";
