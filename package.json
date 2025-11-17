@@ -36,6 +36,9 @@
     "recharts": "^3.4.1",
     "tailwind-merge": "^3.4.0"
   },
+  "engines": {
+    "node": "20.19.5"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
