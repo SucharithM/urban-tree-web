@@ -21,7 +21,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
             <Leaf className="w-8 h-8" />
             <div>
               <h1 className="text-primary-foreground">Prof. Joy Winbourne</h1>
-              <p className="text-xs text-primary-foreground/80">Terrestrial Biogeochemistry Group</p>
+              <p className="text-xs text-primary-foreground/80">
+                Terrestrial Biogeochemistry Group
+              </p>
             </div>
           </div>
 
