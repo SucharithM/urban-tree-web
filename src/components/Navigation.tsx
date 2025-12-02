@@ -50,18 +50,6 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
 
 
   return (
-<<<<<<< Updated upstream
-    <nav className="bg-primary text-primary-foreground sticky top-0 z-50 border-b border-border shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <Leaf className="w-8 h-8" />
-            <div>
-              <h1 className="text-primary-foreground">Prof. Joy Winbourne</h1>
-              <p className="text-xs text-primary-foreground/80">
-                Terrestrial Biogeochemistry Group
-              </p>
-=======
     <IntlProvider locale={locale} messages={messages[locale]}>
       <nav className="bg-primary text-primary-foreground sticky top-0 z-50 border-b border-border shadow-sm">
         {!isReduced && (
@@ -103,7 +91,6 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                   <TabsTrigger value="Español" onClick={() => dispatch(setLocale("es"))}>Español</TabsTrigger>
                 </TabsList>
               </Tabs>
->>>>>>> Stashed changes
             </div>
           </div>
         )}

@@ -9,43 +9,6 @@ import { teamMembers_en, teamMembers_es } from "../app/publications";
 import { useSelector, useDispatch } from 'react-redux';
 
 export function TeamPage() {
-<<<<<<< Updated upstream
-  const teamMembers = [
-    {
-      name: "Dr. Joy Winbourne",
-      role: "Principal Investigator",
-      description:
-        "As a terrestrial biogeochemist and global change ecologist, my research is focused on understanding how plants and soils regulate the movement of carbon, nutrients, and water in terrestrial ecosystems. I am particularly interested in understanding how human activities, such as urbanization, deforestation, forest fragmentation, and climate change, alter biogeochemical cycles. My research agenda is motivated by the need for actionable ecological data and theory to inform sustainable environmental policies and evaluate their efficacy, especially in the context of global climate change. To address these research aims I have conducted studies in remote tropical forests to the densely populated cities of northeastern United States. I integrate field studies, molecular analyses, stable isotopes, remote sensing, meta-analyses, and modeling approaches to scale ecosystem processes at the individual soil core or tree to landscape scales. ",
-      email: "joy_winbourne@uml.edu",
-    },
-    {
-      name: "Andrea Gamache",
-      role: "Phd Student ",
-      description:
-        "Andrea is an enthusiastic disturbance biologist with a BS in Environmental Biology from Christopher Newport University and a MA in Integrative Biology from Kennesaw State University. For her MA, Andrea studied the impact of forest fire and cicada emergence on forest community composition and soil chemistry. For her dissertation research, Andrea plans to study the impact of urbanization and other stressors on plant ecophysiology.  ",
-      email: "placeholder@university.edu",
-    },
-    {
-      name: "Evan Paige",
-      role: "Master Student",
-      description:
-        "Researching the effects of climate variability on forest carbon uptake. Managing the sensor network infrastructure and data pipelines.",
-      email: "placeholder@university.edu",
-    },
-    {
-      name: "Robert Scott",
-      role: " Undergraduate Student",
-      description: "2022/2023 Academic Year Immersive Scholar,2023/2024 Research Assistant",
-      email: "placeholder@university.edu",
-    },
-    {
-      name: "Cecilia Eluszkiewicz",
-      role: " Undergraduate Student ",
-      description: "2022 Summer Immersive Scholar,2024 Summer Research Assistant ",
-      email: "placeholder@university.edu",
-    },
-  ];
-=======
 
   const locale = useSelector(state => state.locale.value)
 
@@ -55,7 +18,6 @@ export function TeamPage() {
     en: messages_en,
     es: messages_es
   }
->>>>>>> Stashed changes
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
@@ -123,48 +85,15 @@ export function TeamPage() {
           </div>
         </div>
 
-<<<<<<< Updated upstream
-        {/* Collaboration Section */}
-        <div className="mt-16 bg-primary/5 rounded-lg p-8 md:p-12 border border-border">
-          <h2 className="text-3xl text-center mb-6">Join Our Research</h2>
-          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
-            We are recruiting! If you are interested in pursuing a Ph.D. in Earth System Sciences
-            studying impacts of urbanization on forest ecosystem processes, please contact Dr. Joy
-            Winbourne by email with a copy of your CV and a description of your research interests
-            to start a conversation.
-          </p>
-          <div className="text-center">
-            <a
-              href="mailto:joy_winbourne@uml.edu"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md hover:bg-primary/90 transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              Contact Us
-            </a>
-=======
         {/* Footer */}
         <footer className="bg-primary text-primary-foreground mt-16 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm">
               <FormattedMessage id="disclaimer" />
             </p>
->>>>>>> Stashed changes
           </div>
         </footer>
       </div>
-<<<<<<< Updated upstream
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-16 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">
-            © 2025 Prof. Joy Winbourne Environmental Research Lab. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
-=======
     </IntlProvider>
->>>>>>> Stashed changes
   );
 }

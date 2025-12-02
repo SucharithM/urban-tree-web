@@ -242,56 +242,6 @@ export function SensorDataPage() {
     return result.node1;
   }
 
-
-  //   Object.entries(data).forEach(([key, value]) => {
-
-  //     const timestamp = new Date(item.Timestamp_Raw);
-  //     // const time = timestamp.toTimeString(); 
-
-  //     // Add temperature data (skip if 0 or Null)
-  //     if (item.Temperature && item.Temperature !== "0" && item.Temperature !== "Null") {
-  //       result.node1.temperatureHistory.push({
-  //         time: timestamp,
-  //         value: parseFloat(item.Temperature)
-  //       });
-  //     }
-
-  //     // Add pressure data (skip if 0 or Null)
-  //     if (item.Pressure && item.Pressure !== "0" && item.Pressure !== "Null") {
-  //       result.node1.pressureHistory.push({
-  //         time: timestamp,
-  //         value: parseFloat(item.Pressure)
-  //       });
-  //     }
-
-  //     // Add humidity data (skip if 0 or Null)
-  //     if (item.Humidity && item.Humidity !== "0" && item.Humidity !== "Null") {
-  //       result.node1.humidityHistory.push({
-  //         time: timestamp,
-  //         value: parseFloat(item.Humidity)
-  //       });
-  //     }
-
-  //     // Add dendrometer data (always include, even negative values)
-  //     if (item.Dendro && item.Dendro !== "Null") {
-  //       result.node1.dendrometerHistory.push({
-  //         time: timestamp,
-  //         value: parseFloat(item.Dendro)
-  //       });
-  //     }
-
-  //     // Add sapflow data (skip if Null)
-  //     if (item.Sapflow && item.Sapflow !== "Null") {
-  //       result.node1.sapflowHistory.push({
-  //         time: timestamp,
-  //         value: parseFloat(item.Sapflow)
-  //       });
-  //     }
-  //   });
-
-  //   return result;
-  // }
-
   const nodeData: Record<string, NodeData> = {
     node1: {
       currentReadings: {
