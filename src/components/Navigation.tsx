@@ -1,11 +1,18 @@
-import { Leaf } from "lucide-react";
+import { Leaf, LogIn, LogOut, Shield } from "lucide-react";
 
 interface NavigationProps {
   currentPage: string;
   onNavigate: (page: string) => void;
+  isAuthenticated?: boolean;
+  onLogout?: () => void;
 }
 
-export function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export function Navigation({
+  currentPage,
+  onNavigate,
+  isAuthenticated = false,
+  onLogout,
+}: NavigationProps) {
   const links = [
     { name: "Home", id: "home" },
     { name: "Sensor Data", id: "data" },
@@ -39,6 +46,37 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                 {link.name}
               </button>
             ))}
+            
+            {isAuthenticated ? (
+              <>
+                <button
+                  onClick={() => onNavigate("admin")}
+                  className={`ml-2 px-4 py-2 rounded-md transition-colors flex items-center gap-2 ${
+                    currentPage === "admin"
+                      ? "bg-primary-foreground/20"
+                      : "bg-primary-foreground/10 hover:bg-primary-foreground/20"
+                  }`}
+                >
+                  <Shield className="w-4 h-4" />
+                  Admin
+                </button>
+                <button
+                  onClick={onLogout}
+                  className="ml-2 px-4 py-2 rounded-md transition-colors bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center gap-2"
+                >
+                  <LogOut className="w-4 h-4" />
+                  Logout
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => onNavigate("login")}
+                className="ml-2 px-4 py-2 rounded-md transition-colors bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                Login
+              </button>
+            )}
           </div>
         </div>
       </div>
