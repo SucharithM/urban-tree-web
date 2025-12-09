@@ -33,7 +33,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
     // Here you would typically handle authentication
     // For now, this is a frontend-only implementation
     console.log("Login attempt with:", { email, password });
-    
+
     // Call the onLogin callback to authenticate the user
     onLogin();
   };
@@ -108,10 +108,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
             )}
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              className="w-full bg-primary hover:bg-accent"
-            >
+            <Button type="submit" className="w-full bg-primary hover:bg-accent">
               <LogIn className="w-5 h-5 mr-2" />
               Sign In
             </Button>
@@ -124,7 +121,9 @@ export function LoginPage({ onLogin }: LoginPageProps) {
               <button
                 type="button"
                 className="text-primary hover:text-accent transition-colors"
-                onClick={() => alert("Contact administrator functionality would be implemented here")}
+                onClick={() =>
+                  alert("Contact administrator functionality would be implemented here")
+                }
               >
                 Contact the research team
               </button>

@@ -43,8 +43,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation 
-        currentPage={currentPage} 
+      <Navigation
+        currentPage={currentPage}
         onNavigate={setCurrentPage}
         isAuthenticated={isAuthenticated}
         onLogout={handleLogout}
