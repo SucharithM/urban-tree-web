@@ -219,7 +219,7 @@ npm run type-check
 
 ---
 
-## 🐛 Known Issues & TODOs
+##  Known Issues & TODOs
 
 ### Current Issues
 - [ ] Data export format needs validation
@@ -236,24 +236,14 @@ npm run type-check
 - [ ] Dark mode toggle
 
 
-## Deployment
-
-### Development Environment
-- **URL:** http://localhost:5173
-- **Branch:** `class`
-- **Purpose:** Development and testing
-
-### Production Environment
-- **URL:** https://urban-tree.netlify.app
-- **Branch:** `main`
-- **Purpose:** Live client facing application
-
-- Link for website: https://urban-tree.vercel.app/
+Link for website: https://urban-tree.vercel.app/
+ 
 
 
 ## Acknowledgments
 
 - Prof. Joy Winbourne for project guidance and domain expertise
+
 
 
 
