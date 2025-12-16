@@ -12,7 +12,7 @@ export interface AuthLoginRequest {
 export interface AuthUser {
   id: number;
   email: string;
-  role: 'ADMIN' | 'USER';
+  role: "ADMIN" | "USER";
 }
 
 export interface AuthLoginResponse {
@@ -105,7 +105,7 @@ export interface TreeProcessedReadingsResponse {
   treeId: string;
   nodeId: string;
   name: string | null;
-  source: 'computed' | 'raw-fallback';
+  source: "computed" | "raw-fallback";
   readings: ProcessedReadingPoint[];
   total: number;
 }
@@ -113,7 +113,7 @@ export interface TreeProcessedReadingsResponse {
 export interface TreeReadingSummaryBucket {
   bucketStart: string; // ISO date-time
   bucketEnd: string; // ISO date-time
-  bucketSize: 'all' | 'day' | 'hour';
+  bucketSize: "all" | "day" | "hour";
   count: number;
   avgTemperature: number | null;
   minTemperature: number | null;
@@ -139,7 +139,7 @@ export interface TreeReadingSummaryResponse {
   treeId: string;
   nodeId: string;
   name: string | null;
-  bucketSize: 'all' | 'day' | 'hour';
+  bucketSize: "all" | "day" | "hour";
   buckets: TreeReadingSummaryBucket[];
 }
 
@@ -152,7 +152,7 @@ export interface ImportJob {
   fileName: string;
   fileSize: number;
   sheetsProcessed: string[] | null;
-  status: 'PENDING' | 'PROCESSING' | 'COMPLETED' | 'FAILED';
+  status: "PENDING" | "PROCESSING" | "COMPLETED" | "FAILED";
   recordsImported: number;
   recordsSkipped: number;
   recordsFailed: number;
@@ -202,15 +202,15 @@ export interface TreeListQueryParams {
 export interface ReadingsQueryParams {
   from?: string; // ISO date-time
   to?: string; // ISO date-time
-  source?: 'rawData' | 'archive' | 'all';
+  source?: "rawData" | "archive" | "all";
   limit?: number;
-  order?: 'asc' | 'desc';
+  order?: "asc" | "desc";
 }
 
 export interface SummaryQueryParams {
   from?: string; // ISO date-time
   to?: string; // ISO date-time
-  source?: 'rawData' | 'archive' | 'all';
-  bucketSize?: 'all' | 'day' | 'hour';
+  source?: "rawData" | "archive" | "all";
+  bucketSize?: "all" | "day" | "hour";
   limit?: number;
 }

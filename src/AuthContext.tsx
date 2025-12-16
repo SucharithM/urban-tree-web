@@ -1,9 +1,9 @@
 // Authentication Context for managing user authentication state
-import { createContext, useContext, useState, useEffect } from 'react';
-import type { ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
+import type { ReactNode } from "react";
 
-import { urbanTreeAPI } from './api-services';
-import type { AuthUser, AuthLoginRequest } from './api-types';
+import { urbanTreeAPI } from "./api-services";
+import type { AuthUser, AuthLoginRequest } from "./api-types";
 
 // Define the shape of our context
 interface AuthContextValue {
@@ -37,12 +37,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // You might want to add a /auth/me endpoint to verify the token
       // For now, we'll just check if token exists
       try {
-        const userData = localStorage.getItem('auth_user');
+        const userData = localStorage.getItem("auth_user");
         if (userData) {
           setUser(JSON.parse(userData));
         }
       } catch (err) {
-        console.error('Failed to load user data:', err);
+        console.error("Failed to load user data:", err);
       }
     }
     setIsLoading(false);
@@ -53,13 +53,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setError(null);
       setIsLoading(true);
       const response = await urbanTreeAPI.login(credentials);
-      console.log('Login response:', response);
+      console.log("Login response:", response);
       setUser(response.user);
-      console.log('Logged in user:', response.user);
+      console.log("Logged in user:", response.user);
       // Save user data to localStorage for persistence
-      localStorage.setItem('auth_user', JSON.stringify(response.user));
+      localStorage.setItem("auth_user", JSON.stringify(response.user));
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Login failed';
+      const errorMessage = err instanceof Error ? err.message : "Login failed";
       setError(errorMessage);
       throw err;
     } finally {
@@ -72,10 +72,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setIsLoading(true);
       await urbanTreeAPI.logout();
     } catch (err) {
-      console.error('Logout error:', err);
+      console.error("Logout error:", err);
     } finally {
       setUser(null);
-      localStorage.removeItem('auth_user');
+      localStorage.removeItem("auth_user");
       setIsLoading(false);
     }
   };
@@ -96,7 +96,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 export function useAuth(): AuthContextValue {
   const context = useContext(AuthContextInstance);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 }

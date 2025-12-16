@@ -1,5 +1,5 @@
 // API Service Layer for Urban Tree API
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosInstance, AxiosError } from "axios";
 
 import type {
   AuthLoginRequest,
@@ -17,10 +17,10 @@ import type {
   SummaryQueryParams,
   ReadingPoint,
   ErrorResponse,
-} from './api-types';
+} from "./api-types";
 
 // Base API URL - update this to your actual API URL
-const API_BASE_URL = 'https://urban-tree-server.netlify.app/api/';
+const API_BASE_URL = "https://urban-tree-server.netlify.app/api/";
 
 class UrbanTreeAPI {
   private client: AxiosInstance;
@@ -30,7 +30,7 @@ class UrbanTreeAPI {
     this.client = axios.create({
       baseURL,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       withCredentials: true, // Important for cookies
     });
@@ -43,7 +43,7 @@ class UrbanTreeAPI {
         }
         return config;
       },
-      (error) => Promise.reject(error)
+      (error) => Promise.reject(error),
     );
 
     // Response interceptor for error handling
@@ -55,7 +55,7 @@ class UrbanTreeAPI {
           this.clearToken();
         }
         return Promise.reject(error);
-      }
+      },
     );
 
     // Load token from localStorage on init
@@ -68,11 +68,11 @@ class UrbanTreeAPI {
 
   private saveToken(token: string) {
     this.token = token;
-    localStorage.setItem('auth_token', token);
+    localStorage.setItem("auth_token", token);
   }
 
   private loadToken() {
-    const token = localStorage.getItem('auth_token');
+    const token = localStorage.getItem("auth_token");
     if (token) {
       this.token = token;
     }
@@ -80,7 +80,7 @@ class UrbanTreeAPI {
 
   private clearToken() {
     this.token = null;
-    localStorage.removeItem('auth_token');
+    localStorage.removeItem("auth_token");
   }
 
   public getToken(): string | null {
@@ -93,7 +93,7 @@ class UrbanTreeAPI {
 
   async login(credentials: AuthLoginRequest): Promise<AuthLoginResponse> {
     try {
-      const response = await this.client.post<AuthLoginResponse>('/auth/login', credentials);
+      const response = await this.client.post<AuthLoginResponse>("/auth/login", credentials);
       this.saveToken(response.data.token);
       return response.data;
     } catch (error) {
@@ -103,7 +103,7 @@ class UrbanTreeAPI {
 
   async logout(): Promise<LogoutResponse> {
     try {
-      const response = await this.client.post<LogoutResponse>('/auth/logout');
+      const response = await this.client.post<LogoutResponse>("/auth/logout");
       this.clearToken();
       return response.data;
     } catch (error) {
@@ -118,7 +118,7 @@ class UrbanTreeAPI {
 
   async getTrees(params?: TreeListQueryParams): Promise<TreeListResponse> {
     try {
-      const response = await this.client.get<TreeListResponse>('/trees', { params });
+      const response = await this.client.get<TreeListResponse>("/trees", { params });
       return response.data;
     } catch (error) {
       throw this.handleError(error);
@@ -138,12 +138,14 @@ class UrbanTreeAPI {
   // Readings
   // ============================================================================
 
-  async getTreeReadings(treeId: string, params?: ReadingsQueryParams): Promise<TreeReadingsResponse> {
+  async getTreeReadings(
+    treeId: string,
+    params?: ReadingsQueryParams,
+  ): Promise<TreeReadingsResponse> {
     try {
-      const response = await this.client.get<TreeReadingsResponse>(
-        `/trees/${treeId}/readings`,
-        { params }
-      );
+      const response = await this.client.get<TreeReadingsResponse>(`/trees/${treeId}/readings`, {
+        params,
+      });
       return response.data;
     } catch (error) {
       throw this.handleError(error);
@@ -161,12 +163,12 @@ class UrbanTreeAPI {
 
   async getProcessedReadings(
     treeId: string,
-    params?: ReadingsQueryParams
+    params?: ReadingsQueryParams,
   ): Promise<TreeProcessedReadingsResponse> {
     try {
       const response = await this.client.get<TreeProcessedReadingsResponse>(
         `/trees/${treeId}/readings/processed`,
-        { params }
+        { params },
       );
       return response.data;
     } catch (error) {
@@ -176,12 +178,12 @@ class UrbanTreeAPI {
 
   async getReadingSummary(
     treeId: string,
-    params?: SummaryQueryParams
+    params?: SummaryQueryParams,
   ): Promise<TreeReadingSummaryResponse> {
     try {
       const response = await this.client.get<TreeReadingSummaryResponse>(
         `/trees/${treeId}/readings/summary`,
-        { params }
+        { params },
       );
       return response.data;
     } catch (error) {
@@ -195,7 +197,7 @@ class UrbanTreeAPI {
 
   async checkHealth(): Promise<HealthResponse> {
     try {
-      const response = await this.client.get<HealthResponse>('/health');
+      const response = await this.client.get<HealthResponse>("/health");
       return response.data;
     } catch (error) {
       throw this.handleError(error);
@@ -204,7 +206,7 @@ class UrbanTreeAPI {
 
   async checkDatabase(): Promise<DbCheckResponse> {
     try {
-      const response = await this.client.get<DbCheckResponse>('/dbcheck');
+      const response = await this.client.get<DbCheckResponse>("/dbcheck");
       return response.data;
     } catch (error) {
       throw this.handleError(error);
@@ -225,7 +227,7 @@ class UrbanTreeAPI {
         return new Error(axiosError.message);
       }
     }
-    return new Error('An unexpected error occurred');
+    return new Error("An unexpected error occurred");
   }
 }
 

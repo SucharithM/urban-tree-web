@@ -16,7 +16,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [localError, setLocalError] = useState("");
-  
+
   const { login, error: authError } = useAuth();
 
   // Combine local validation errors with auth errors
@@ -123,8 +123,8 @@ export function LoginPage({ onLogin }: LoginPageProps) {
             )}
 
             {/* Submit Button */}
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full bg-primary hover:bg-accent"
               disabled={isSubmitting}
             >
