@@ -219,30 +219,11 @@ npm run type-check
 
 ---
 
-##  Known Issues & TODOs
-
-### Current Issues
-- [ ] Data export format needs validation
-- [ ] Mobile menu animation could be smoother
-
-### Future Enhancements
-- [ ] WebSocket integration for real time updates
-- [ ] Advanced data filtering and search
-- [ ] Data comparison between nodes
-- [ ] Custom date range selection
-- [ ] User preferences and settings
-- [ ] Email notifications for alerts
-- [ ] Multi language support
-- [ ] Dark mode toggle
-
 
 Link for website: https://urban-tree.vercel.app/
  
 
 
-## Acknowledgments
-
-- Prof. Joy Winbourne for project guidance and domain expertise
 
 
 
