@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { AuthProvider, useAuth } from "./AuthContext";
 import { AdminPage } from "./components/AdminPage";
 import { HomePage } from "./components/HomePage";
 import { LoginPage } from "./components/LoginPage";
@@ -8,21 +9,30 @@ import { ResearchPage } from "./components/ResearchPage";
 import { SensorDataPage } from "./components/SensorDataPage";
 import { TeamPage } from "./components/TeamPage";
 
-export default function App() {
+function AppContent() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const { isAuthenticated, logout } = useAuth();
 
   const handleLogin = () => {
-    setIsAuthenticated(true);
-    setCurrentPage("admin");
+    // After successful login, redirect to sensor data page
+    setCurrentPage("data");
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
+  const handleLogout = async () => {
+    await logout();
     setCurrentPage("home");
   };
 
   const renderPage = () => {
+    // Show login page if trying to access admin without authentication
+    if (currentPage === "admin" && !isAuthenticated) {
+      return <LoginPage onLogin={handleLogin} />;
+    }
+
+    if (currentPage === "login") {
+      return <LoginPage onLogin={handleLogin} />;
+    }
+
     switch (currentPage) {
       case "home":
         return <HomePage />;
@@ -32,10 +42,8 @@ export default function App() {
         return <TeamPage />;
       case "research":
         return <ResearchPage />;
-      case "login":
-        return <LoginPage onLogin={handleLogin} />;
       case "admin":
-        return isAuthenticated ? <AdminPage /> : <LoginPage onLogin={handleLogin} />;
+        return <AdminPage />;
       default:
         return <HomePage />;
     }
@@ -53,3 +61,13 @@ export default function App() {
     </div>
   );
 }
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
+  );
+}
+
+export default App;
