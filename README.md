@@ -1,4 +1,4 @@
-# Urban Tree Sensor Data Visualization - Class/Development Branch
+# Urban Tree Ecophysiology - Class/Development Branch
 
 ## Course Project Information
 
@@ -254,5 +254,6 @@ npm run type-check
 ## Acknowledgments
 
 - Prof. Joy Winbourne for project guidance and domain expertise
+
 
 
