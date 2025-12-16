@@ -5,9 +5,9 @@
 
 
 ### Course Details
-- **Course:** [Internet and Web Systems I]
+- **Course:** Internet and Web Systems I
 - **Instructor:** Prof. Samantha Reig
-- **Team Members:** [Sucharith Madhusoodana, Karan Hassan Balarama, Dheeraj Bharadwaj Kistampally, Adithya Garimella]
+- **Team Members:** Sucharith Madhusoodana, Karan Hassan Balarama, Dheeraj Bharadwaj Kistampally, Adithya Garimella
 - **Semester:** Fall 2025
 
 ## Architecture
@@ -254,4 +254,5 @@ npm run type-check
 ## Acknowledgments
 
 - Prof. Joy Winbourne for project guidance and domain expertise
+
 
