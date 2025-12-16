@@ -31,7 +31,7 @@ Supporting environmental research and education through accessible, real-time ur
 
 ---
 
-## Live Demo
+## Live Website
 
 **Visit:** https://urban-tree.vercel.app/
 
@@ -93,7 +93,6 @@ Supporting environmental research and education through accessible, real-time ur
 
 ---
 
-**Website:** https://urban-tree.vercel.app/
 
 
 
