@@ -3,7 +3,7 @@
 ---
 ##  About the Project
 
-The **Urban Tree Ecophysiology** is a web-based application that provides real-time visualization and analysis of environmental sensor data from urban tree monitoring stations. This platform enables researchers, students, and environmental professionals to access, analyze, and download high-quality environmental data.
+The **Urban Tree Ecophysiology** is a web based application that provides real time visualization and analysis of environmental sensor data from urban tree monitoring stations. This platform enables researchers, students, and environmental professionals to access, analyze, and download high-quality environmental data.
 
 ### Mission
 Supporting environmental research and education through accessible, real-time urban tree monitoring data.
@@ -12,7 +12,7 @@ Supporting environmental research and education through accessible, real-time ur
 - Urban tree physiology and health monitoring
 - Environmental stress indicators
 - Climate impact assessment
-- Long-term ecological research
+- Long term ecological research
 
 ---
 
@@ -35,33 +35,6 @@ Supporting environmental research and education through accessible, real-time ur
 
 **Visit:** https://urban-tree.vercel.app/
 
-
----
-##  Monitoring Stations
-
-### Active Stations
-
-#### Tree-1 (Queenstown, MD)
-- **Status:** Active
-- **Location:** Queenstown, Maryland
-- **Sensor Depths:** 10cm, 30cm, 50cm
-
-#### Tree-2 (ACRU_BR_SE)
-- **Status:** Active
-- **Location:** ACRU_BR_SE
-- **Sensor Depths:** 15cm, 35cm, 60cm
-
-#### Tree-3 (ACRU_BR_S)
-- **Status:** Active
-- **Location:** ACRU_BR_S
-- **Sensor Depths:** 10cm, 25cm, 45cm
-
-#### Tree-4 (Harvard Forest Witness Tree)
-- **Status:** Maintenance
-- **Location:** Harvard Forest, Massachusetts
-- **Sensor Depths:** 12cm, 30cm, 55cm
-
----
 
 ## Quick Start Guide
 
@@ -92,6 +65,7 @@ Supporting environmental research and education through accessible, real-time ur
    - Download reports
 
 ---
+
 
 
 
